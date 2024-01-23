@@ -22,18 +22,45 @@ body{
 
 .mainPic > img{
     width: 110%;
-    
 }
 
 .secondaryPic{
     width: 30%;
 }
 
+.pic i{
+    position: absolute;
+
+    background-color: lightgray;
+    color: black;
+    opacity: 0.5;
+    
+
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    cursor: pointer;
+}
+
 .pic{
     height: calc( 100% / 5 );
     width: 100%;
+
+    position: relative;
 }
 
 .pic img{
     width: 100%;
+}
+
+
+.pic .fa-chevron-down {
+    background-color: lightgray;
+    opacity: 0.5;
+    
+
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    cursor: pointer;
 }
