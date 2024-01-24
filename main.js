@@ -28,7 +28,7 @@ const bestGames = [
     },
     {
         Name: "Fortnite"
-        Descrizione: "Fornite è un videogioco “TPS – third person shooter”, in italiano “sparatutto in terza persona”, di genere “Battle Royale”."
+        Descrizione: "Fornite è un videogioco “TPS third person shooter”, in italiano “sparatutto in terza persona”, di genere “Battle Royale”."
         Immagine: "./img/fortnite.jpg",
     },
     {
@@ -48,4 +48,23 @@ const bestGames = [
     },
 ];
 
-console.log( bestGames );
+
+let mainPicArray = bestGames.map(( gameAd ) => gameAd.Immagine)
+
+let arrowUp = document.getElementById("up");
+let arrowDown = document.getElementById("down");
+let image = document.getElementById("mainImg");
+
+let imageInd = 0;
+
+updateImage();
+
+arrowUp.addEventListener("click", function() {
+    imageInd = (imageInd - 1 + mainPicArray.length) % mainPicArray.length;
+    updateImage();
+})
+
+arrowDown.addEventListener("click", function() {
+    imageInd = (imageInd + 1) % mainPicArray.length;
+    updateImage();
+})
