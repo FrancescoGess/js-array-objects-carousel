@@ -22,28 +22,18 @@
 
 const bestGames = [
     {
-        Name: "Spiderman"
-        Descrizione: "Spider-Man in realtà è Peter Parker, un giovane brillante con la passione per la fotografia che viene morso da un ragno radioattivo"
         Immagine: "./img/spiderman.jpg",
     },
     {
-        Name: "Fortnite"
-        Descrizione: "Fornite è un videogioco “TPS third person shooter”, in italiano “sparatutto in terza persona”, di genere “Battle Royale”."
         Immagine: "./img/fortnite.jpg",
     },
     {
-        Name: "League of Legend"
-        Descrizione: " League of Legends è un gioco di strategia in cui due squadre di cinque potenti campioni si affrontano per distruggere la base degli avversari."
         Immagine: "./img/league-of-legends.jpeg",
     },
     {
-        Name: "The finals"
-        Descrizione: "Ruba, incassa, scappa."
         Immagine: "./img/thefinals.webp",
     },
     {
-        Name: "Escape from Tarkov"
-        Descrizione: "Escape from Tarkov è un particolare sparatutto ibrido tra FPS, TPS e RPG con elementi online."
         Immagine: "./img/WCCFescapefromtarkov1.jpg",
     },
 ];
@@ -68,3 +58,15 @@ arrowDown.addEventListener("click", function() {
     imageInd = (imageInd + 1) % mainPicArray.length;
     updateImage();
 })
+
+
+//Aggiungo la funzione per creare il container con l'img
+
+function updateImage() {
+    image.innerHTML = `
+            <div class="mainPic">
+                <img class="_imgContent position-relative" src="${mainPicArray[imageInd]}" alt="">
+            </div>
+            <div><p>Name: ${ mainPicArray[imageInd].Name}  ${mainPicArray[imageInd].Descrizione} </p></div>
+            `
+        }

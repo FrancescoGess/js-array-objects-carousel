@@ -22,7 +22,8 @@ body{
 
 
 .mainPic > img{
-    width: 110%;
+    width: 100%;
+    
 }
 
 .secondaryPic{
